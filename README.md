@@ -1,2 +1,8 @@
-# CustomNetlib
-This is custom developed multilayer backpropagation neural network library written python that can be used with numerous of deep learning applications. It helped me develop intuition and insights about artificial neural networks and various other underlying theoretical concepts.   
+## CustomNetlib
+This repository contains python implementation of Artificial Neural Network from scratch(only using numpy). The trainning of the parameters is performed using gradient descent and the error is backpropagated through various layers using backpropagation algorithm.
+I have implemented relu, softmax and leaky relu activation functions which you can easily extend by adding more elif conditions in the activate() and activatePrime() methods. 
+There is choice provided to store the parameters of the network in json file to be used in later times either in deployment stage or in furthur trainning stage.
+The splitting of data for trainning and validation is taken care by the code itself and thus no need to rely on Scikit-Learn's train_test_split() method for your preprocessing work flow. You just need to set the splitRatio parameter of the Network class.
+For evaluation of temporal constraints of the trainning process, I have encorporated epoch wise running time report(which typically implies how fast computation your machine is capable of doing at that instant of time).
+I have provided room for this code to be extended for development of a convolutional neural network(CNN) on top of this by returning the error value i.e. gradient of loss function with respect to the input layer which can furthur be reshaped into the tensor of K X M X N('K' is number of channels, 'M' is number of rows and 'N' is number of columns). Which can then backpropagated through upsampling and deconvolution layers inturn updating the kernel weights and bias (parameters of CNN). Which is upcomming addition which I will make to this.  
+#### This is developed to understand how backpropagation neural networks works in the backend.  
